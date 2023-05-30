@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="css/pc.css">
+    <title>Face Checker - PC</title>
+</head>
+<body>
+    <div class="background">
+        <div class="image-box">
+            <input class="upl1" id="uploadfile" type="file" accept="image/*" />
+            <img id="image" src="#" alt="Your image" />
+            <div class="upload-button">
+                <button class="fas fa-images">Upload</button>
+            </div>
+        </div>
+        <div class="menu">
+            <p class="title">Face Checker</p>
+            <button onchange="init()" class="ac1234"><i class="fas fa-power-off"></i></button>
+            <button onchange="predict()">예측</button>
+            <div class="label-container" id="label-container"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="script.js"></script>
+    <script src="upload.js"></script>
+</body>
+</html>
